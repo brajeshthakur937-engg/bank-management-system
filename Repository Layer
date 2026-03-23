@@ -1,3 +1,7 @@
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 }
+@Repository
+public interface AccountRepository extends JpaRepository<Account, Long> {
+    Optional<Account> findByAccountNumber(String accountNumber);
+}
